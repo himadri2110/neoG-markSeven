@@ -4,13 +4,17 @@
     box-sizing: border-box;
 }
 
+html {
+    position: relative;
+}
+
 body {
-    height: 100vh;
-    margin: 0 15rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-color: rgb(85, 69, 69);
     color: white;
     font-family: 'Caveat', cursive;
-    overflow: hidden;
 }
 
 h1 {
@@ -19,10 +23,15 @@ h1 {
     text-transform: uppercase;
 }
 
+main {
+    margin: 1rem;
+}
+
 #txt-input, #output {
+    margin: auto;
     display: block;
     padding: 1rem;
-    width: calc(100vw - 30rem);
+    width: 80%;
     height: 20vh;
     font-size: 1rem;
     outline: none;
@@ -31,20 +40,32 @@ h1 {
 }
 
 button {
-    margin: 1rem 0;
+    display: block;
+    margin: 1rem auto;
     padding: 0.5rem;
     font-size: 0.8rem;
     font-family: 'Caveat', cursive;
     text-transform: uppercase;
     border-radius: 0.3rem;
-    border: 1px solid black;
     background-color: rgb(116, 116, 116);
     color: white;
     outline: none;
+    border: none;
     cursor: pointer;
 }
 
 #output {
-    margin: 1rem 0;
     background-color: white;
+}
+
+div.about {
+    margin-top: 2rem;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(116, 116, 116);
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
 }
