@@ -9,31 +9,35 @@
 
     <link rel="stylesheet" href="./style.css">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
-
     <title>Yoda Speak</title>
 </head>
 
 <body>
     
-    <h1>Yoda Speak</h1>
+    <header>
+        <h1>Yoda Speak</h1>
+
+        <p class="github"><a href="https://github.com/himadri2110/neoG-markSeven" target="_blank">Github</a></p>
+    </header>
 
     <main>
-        <textarea id="txt-input" placeholder="Type here..."></textarea>
+        <form id="form">
+            <textarea id="txt-input" placeholder="Type here..." required></textarea>
 
-        <button id="btn-translate">Translate</button>
+            <button type="submit">Translate</button>    
+        </form>
         
-        <textarea id="output" placeholder="Output will be shown here"></textarea>
+        <textarea id="output" placeholder="Output will be shown here..." readonly></textarea>
     </main>
 
-    <div class="about">
+    <footer>
         ABOUT:
         <br>
-        Convert from English to Yoda speak. Yoda often orders sentences as Object-Subject-Verb, split verbs, switches entire phrases and sometimes uses sentences that are different from his normal syntax! Because of this it is difficult to accurately represent his sentence structure. But we tried hard and we constantly improve our patterns. Have fun and may the force be with you! Yoda is a registered trademark of Disney.
-    </div>
+        Convert from English to Yoda speak. Have fun and may the force be with you! Yoda is a registered trademark of Disney.
+        <br><br>
+
+        <p><a href="https://himadrishah.tech/" target="_blank">Himadri Shah</a></p>
+    </footer>
 
     <script src="./app.js"></script>
 

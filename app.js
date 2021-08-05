@@ -1,6 +1,6 @@
 var textInput = document.querySelector('#txt-input');
-var translateBtn = document.querySelector('#btn-translate');
 var output = document.querySelector('#output');
+var form = document.querySelector('#form');
 
 var URL = "https://api.funtranslations.com/translate/yoda.json";
 
@@ -12,8 +12,10 @@ function errorHandler(error) {
     alert("Error occured: " + error);
 }
 
-translateBtn.addEventListener("click", function() {
+form.addEventListener("submit", function(e) {
 
+    e.preventDefault();
+    
     var input = textInput.value;
 
     fetch(getURL(input))
