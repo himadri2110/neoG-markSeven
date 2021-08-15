@@ -16,8 +16,11 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: var(--background);
+    /* background-color: var(--background); */
     color: white;
+    background: url('./yoda.jpg');
+    background-size: cover;
+    background-position: top center;
 }
 
 header {
@@ -44,6 +47,7 @@ main {
     outline: none;
     border: 1px solid black;
     border-radius: 0.3rem;
+    opacity: 0.7;
 }
 
 button {
