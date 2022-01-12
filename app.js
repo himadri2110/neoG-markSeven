@@ -1,27 +1,20 @@
-var textInput = document.querySelector('#txt-input');
-var output = document.querySelector('#output');
-var form = document.querySelector('#form');
+const textInput = document.querySelector("#txt-input");
+const output = document.querySelector("#output");
+const form = document.querySelector("#form");
 
-var URL = "https://api.funtranslations.com/translate/yoda.json";
+let URL = "https://api.funtranslations.com/translate/yoda.json";
 
-function getURL(text) {
-    return URL + "?text=" + text;
-}
+const getURL = (text) => `${URL}?text=${text}`;
 
-function errorHandler(error) {
-    alert("Error occured: " + error);
-}
+const errorHandler = (error) => alert(`Error occured: ${error}`);
 
-form.addEventListener("submit", function(e) {
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-    e.preventDefault();
-    
-    var input = textInput.value;
+  const inputText = textInput.value;
 
-    fetch(getURL(input))
-    .then(response => response.json())
-    .then(json => {
-        output.innerText = json.contents.translated;
-    })
+  fetch(getURL(inputText))
+    .then((response) => response.json())
+    .then((json) => (output.innerText = json.contents.translated))
     .catch(errorHandler);
 });
